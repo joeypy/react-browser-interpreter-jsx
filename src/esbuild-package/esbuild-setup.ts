@@ -1,4 +1,5 @@
 import * as esbuild from "esbuild-wasm";
+import { fetchPlugin } from "./plugins/fetch-plugin";
 import { unpkgPathPlugin } from "./plugins/unpkg-path-plugin";
 
 export const setupBundle = async () => {
@@ -14,7 +15,7 @@ export const bundler = async (rawCode: string): Promise<any> => {
       entryPoints: ["index.js"],
       bundle: true,
       write: false,
-      plugins: [unpkgPathPlugin()],
+      plugins: [unpkgPathPlugin(), fetchPlugin(rawCode)],
       define: {
         // "process.env.NODE_ENV": '"production"',
         global: "window",

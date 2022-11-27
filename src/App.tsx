@@ -9,7 +9,7 @@ export const App = () => {
 
   const onClick = async () => {
     // const result = await esbuild.transform(input, { loader: "jsx" });
-    const result = await bundler("hola");
+    const result = await bundler(input);
     console.log("result:", result);
     setCode(result.code);
   };
