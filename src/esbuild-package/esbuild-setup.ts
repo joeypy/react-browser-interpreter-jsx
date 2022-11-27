@@ -5,7 +5,7 @@ import { unpkgPathPlugin } from "./plugins/unpkg-path-plugin";
 export const setupBundle = async () => {
   await esbuild.initialize({
     worker: true,
-    wasmURL: "/esbuild.wasm",
+    wasmURL: "https://unpkg.com/esbuild-wasm@0.15.15/esbuild.wasm",
   });
 };
 
