@@ -15,6 +15,10 @@ export const bundler = async (rawCode: string): Promise<any> => {
       bundle: true,
       write: false,
       plugins: [unpkgPathPlugin()],
+      define: {
+        // "process.env.NODE_ENV": '"production"',
+        global: "window",
+      },
     })
     .then((result): any => {
       return {
@@ -29,4 +33,3 @@ export const bundler = async (rawCode: string): Promise<any> => {
       };
     });
 };
-
