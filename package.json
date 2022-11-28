@@ -9,15 +9,23 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@mantine/core": "^5.8.3",
+    "@mantine/form": "^5.8.3",
+    "@mantine/hooks": "^5.8.3",
     "@monaco-editor/react": "^4.4.6",
+    "@tabler/icons": "^1.113.0",
     "axios": "^1.2.0",
     "esbuild-wasm": "^0.15.15",
     "localforage": "^1.10.0",
     "monaco-editor": "^0.34.1",
+    "prettier": "^2.8.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "zod": "^3.19.1"
   },
   "devDependencies": {
+    "@types/prettier": "^2.7.1",
     "@types/react": "^18.0.24",
     "@types/react-dom": "^18.0.8",
     "@vitejs/plugin-react": "^2.2.0",

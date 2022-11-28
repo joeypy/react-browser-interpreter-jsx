@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import { CodeEditor, TCode } from './components/CodeEditor';
+import { DrawerOptionEditor } from './components/DrawerOptionEditor';
 import { setupBundle, bundler } from './esbuild-package/esbuild-setup';
 
 export const App = () => {
@@ -46,13 +47,8 @@ export const App = () => {
 
   return (
     <div>
-      <CodeEditor initialValue={inputCode} setInput={setInputCode} />
-      {/* <textarea
-        value={codeInput}
-        onChange={(e) => setCodeInput(e.target.value)}
-        cols={50}
-        rows={10}
-      ></textarea> */}
+      {/* <DrawerOptionEditor /> */}
+      <CodeEditor input={inputCode} setInput={setInputCode} />
       <div>
         <button onClick={onClick}>Submit</button>
       </div>
